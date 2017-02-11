@@ -79,7 +79,7 @@ public class RNGooglePlacesModule extends ReactContextBaseJavaModule implements 
      * Called after the autocomplete activity has finished to return its result.
      */
     @Override
-    public void onActivityResult(Activity activity, final int requestCode, final int resultCode, final Intent data) {
+    public void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
 
         // Check that the result was from the autocomplete widget.
         if (requestCode == AUTOCOMPLETE_REQUEST_CODE) {
@@ -412,9 +412,9 @@ public class RNGooglePlacesModule extends ReactContextBaseJavaModule implements 
         return RNGooglePlacesPlaceTypeEnum.findByTypeId(id).getLabel();
     }
 
-    @Override
-    public void onNewIntent(Intent intent) {
-    } 
+    // @Override
+    // public void onNewIntent(Intent intent) {
+    // } 
 
     @Override
     public void onConnected(Bundle connectionHint) {
